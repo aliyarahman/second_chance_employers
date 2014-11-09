@@ -1,3 +1,5 @@
+from settings_hidden import *
+
 """
 Django settings for second_chance project.
 
@@ -17,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'f4vwp(2t8(rp_05ed90caygw)v()c8!ft#hh!zjg(ai1ombv=m'
+SECRET_KEY = hidden_secret_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -36,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -58,8 +61,12 @@ WSGI_APPLICATION = 'second_chance.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'second_chance',
+        'USER': hidden_db_user,
+        'PASSWORD': hidden_db_password,
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
@@ -81,3 +88,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+
+TEMPLATE_DIRS = (
+    os.path.join(os.path.dirname(__file__), '../app/templates').replace('\\','/'),
+)
+
+
+STATICFILES_DIRS = (
+    os.path.join(os.path.dirname(__file__), '../app/static').replace('\\','/'),
+)

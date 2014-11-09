@@ -1,0 +1,299 @@
+/* Bootstrap Overrides */
+
+
+body {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+a {
+    color: #fff;
+}
+
+.presslink{
+    color:#278c80;
+}
+
+a:hover,
+a:focus {
+    color: #686868;
+}
+
+.btn {
+  border-radius: 5px;
+  background-color: #278c80;
+  margin-left: 20%;
+  font-style: bold;
+  padding: 3%;
+  box-shadow: 2px 2px 4px #696969;
+}
+
+.btn-primary {
+  background-color: #686868;
+  border-color: #686868;
+  font-size: 25px;
+}
+
+.btn-2 {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: -5px;
+  padding-bottom: -10px;
+}
+
+.btn-primary-2 {
+  font-size: 25px;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  background-color: #101141;
+  border-color: #101141;
+}
+
+
+.btn-contact {
+  background-color: #686868;
+  color: white;
+  margin-top: -1%;
+  float: right;
+  margin-left: 2%;
+  padding right: 15px;
+  padding left: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.btn-contact:hover,
+.btn-contact:focus,
+.btn-contact:active,
+.btn-contact.active,
+.open > .dropdown-toggle.btn-primary {
+  background-color: #101141;
+  border-color: #101141;
+  color: white;
+}
+
+.btn-nav {
+  background-color: #278c80;
+  border-color: #278c80;
+  margin: 2px;
+}
+
+.btn-nav:hover,
+.btn-nav:focus,
+.btn-nav:active,
+.btn-nav.active,
+.open > .dropdown-toggle.btn-primary {
+  background-color: #686868;
+  border-color: #686868;
+}
+
+/* Navigation & Brand */
+
+.navbar {
+    border-radius: 0;
+    background-color: #278c80;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.navbar-brand {
+    color: #333;
+    font-size: 20px;
+}
+
+.nav .navbar-nav {
+    color: #686868;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #278c80;
+    top: -300px;
+}
+
+.soc_media_links li {
+  margin: 0px 5px;
+}
+
+.twitter-icon {
+  line-height: 3em;
+}
+
+.fb-like {
+  line-height: 1.9em;
+  margin-left: 10px;
+}
+
+/* Jumbotron */
+
+
+.jumbotron {
+  margin-bottom: 4em;
+}
+
+.jumbotron img {
+   width: 100%; position: absolute;
+}
+
+.change {
+   vertical-align; top;
+   height: 100%;
+   padding-left: 10%;
+   padding-right: 5%;
+   max-width: 150%;  /* for IE 6 */
+   background: black;
+   opacity: 0.7;
+   text-align: left;
+}
+
+
+.change h1 { 
+   color: white; 
+   font: Helvetica, Sans-Serif; 
+   letter-spacing: -1px;
+   margin-bottom: -25px;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .change h1 {font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .change h1 {font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .change h1 {font-size: 1.5em;
+    }
+}
+
+
+
+
+
+.jumbotron input.form-control {
+    font-size: 18px;
+    padding: 20px;
+    border-radius: 0;
+}
+
+.jumbotron select.form-control {
+    padding: 20px;
+    height: 42px;
+    position: relative;
+    left: -5px;
+    border-radius: 0;
+}
+.jumbotron .btn {
+    padding: 40px 20px;
+    z-index: 1;
+    border-radius: 0;
+    margin: 0;
+    left: -12px;
+    position: relative;
+}
+
+
+
+
+
+.white_text {
+    color: #fff;
+}
+
+.green_text {
+    color: #278c80;
+}
+
+.charcoal_text {
+    color: #686868;
+}
+
+
+h3 span { 
+   color: white; 
+   font: bold, Helvetica, Sans-Serif; 
+   letter-spacing: -1px;
+}
+
+.buttontagline {
+  margin-left: 20%;
+  padding-right: 10%;
+  margin-bottom: 8%;
+  margin-top: 5%;
+
+}
+
+.facetag {
+    background: transparent;
+    margin: 0 30px 0 30px;
+    padding: 20px 0;
+
+}
+
+
+.jumbotron-title {
+    background-color: #444;
+    color: #fff;
+    text-align: left;
+    padding-top: 4%;
+    padding-bottom: 1%;
+}
+
+
+.content {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.landing .landing--form {
+    background: transparent;
+    zoom: 1;
+    margin: 0 30px 0 30px;
+    padding: 20px 0;
+}
+
+.site-info{
+  background-color: black;
+  opacity: 0.8;
+  color: white;
+  font-size: 1em;
+  padding-bottom: 2em;
+  padding-top: 3em;
+}
+
+.cfp {
+  background-color: #278c80;
+  margin-top: 3%;
+  padding: 3% 0% 3% 0%;
+}
+
+.person_holder {
+  padding: 1em;
+  margin: 2em;
+  box-shadow: 2px 2px 4px #696969;
+}
+
+.person_holder:hover {
+  box-shadow: 8px 8px 16px #696969;
+}
+
+.person_holder img {height: 200px;}
+
+.question {
+  color: #101141;
+  font-size: 30px;
+}
+
+form #id_interested_in li { list-style: none;
+                            padding-bottom: 7px;}
+form ul#id_interested_in {padding-left: 0px;}
