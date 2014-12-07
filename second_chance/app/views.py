@@ -16,8 +16,21 @@ def index(request):
 def about(request):
     return render(request, "about.html")
 
+def rate(request):
+    return render(request, "rate.html")
+
 def search(request):
     return render(request, "search.html")
 
-def employer(employer, employer_id):
-    return render(request, "employer.html")
+def results(request):
+    employers = Employer.objects.all()
+    return render(request, "results.html", {'employers':employers})
+
+def employer_home(employer):
+    return render(request, "employer_home.html")
+
+def add_employer(employer, employer_id):
+    return render(request, "add_employer.html")
+
+def edit_employer(employer, employer_id):
+    return render(request, "edit_employer.html")
