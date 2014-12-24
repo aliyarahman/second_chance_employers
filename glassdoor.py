@@ -13,3 +13,5 @@ urlparams = {'t.p': api_keys.GLASSDOOR_ID, 't.k': api_keys.GLASSDOOR_KEY, 'useri
 q = requests.get("http://api.glassdoor.com/api/api.htm", params=urlparams)
 print(q.url)
 
+#q.json()
+#above command getting an exception when run
