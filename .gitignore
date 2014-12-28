@@ -1,2 +1,5 @@
+second_chance/second_chance/settings_hidden.py
+venv
 api_keys.py
 *.pyc
+second_chance/app/migrations/*
