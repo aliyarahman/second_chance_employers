@@ -49,7 +49,7 @@ class Position(models.Model):
     title = models.CharField(max_length=40)
     phone = models.CharField(max_length=40, null=True, blank=True)
     worksite_location = models.CharField(max_length=255, null=True, blank=True)
-    job_posted = models.CharField(max_length = 40, null=True, blank = True)
+    job_posted = models.CharField(max_length = 100, null=True, blank = True) #link to the position
     collateral_sanction_applies = models.BooleanField(default=True)
     which_collateral_sanction_applies = models.CharField(max_length=200, null=True, blank=True)
 
