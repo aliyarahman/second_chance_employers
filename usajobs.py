@@ -63,9 +63,10 @@ job_fields = ["employer_name",
 
 
 recordcount = 1
-start = 11500 #should be zero, set to something higher for faster debugging
-while recordcount > 0:
-
+start = 0 #should be zero, set to something higher for faster debugging
+stop = -1 #set to -1 to do everything
+i = 0
+while recordcount > 0 and (start < stop or stop == -1):
     r = requests.get("%s&zc1=DC&rd1=100&rs=%d&re=%d" % (base_url, start, start+500))
     #todo: deal with pagination
 
@@ -83,7 +84,7 @@ while recordcount > 0:
 
 with open("positions.csv","a") as positions:
     writer = csv.DictWriter(positions,fieldnames = job_fields)
-    writer.writeheader()
+    #writer.writeheader()
     i = 0
     for j in job_ids:
         if i % 100 == 0:
