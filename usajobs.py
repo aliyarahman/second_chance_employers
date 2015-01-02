@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*- 
+
 import requests
 from bs4 import BeautifulSoup
 from collections import defaultdict
@@ -84,7 +86,7 @@ while recordcount > 0 and (start < stop or stop == -1):
 
 with open("positions.csv","a") as positions:
     writer = csv.DictWriter(positions,fieldnames = job_fields)
-    #writer.writeheader()
+    writer.writeheader()
     i = 0
     for j in job_ids:
         if i % 100 == 0:
@@ -94,7 +96,7 @@ with open("positions.csv","a") as positions:
         r = requests.get("%s&jvid=%s" % (base_url, j))
         soup = BeautifulSoup(r.text)
         job_dict["employer_name"] = soup.job.company.text
-        job_dict["position_title"] = soup.job.company.text
+        job_dict["position_title"] = soup.job.title.text
         job_dict["position_location"] = soup.job.location.text
         job_dict["job_posted"] = soup.job.url.text
         description = soup.job.description.text
@@ -194,4 +196,4 @@ with open("positions.csv","a") as positions:
             #put this in notes
             job_dict["employer_notes"] = "background check"
 
-        writer.writerow(job_dict)
+        writer.writerow({k:v.encode('utf8') for k,v in job_dict.items()})
