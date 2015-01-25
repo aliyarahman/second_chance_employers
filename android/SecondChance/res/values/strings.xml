@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Second Chance</string>
+    <string name="rate">Rate</string>
+    <string name="support">Support</string>
+    <string name="info">Info</string>
+    <string name="title_activity_rating">RatingActivity</string>
+    <string name="whatIs">A returning citizen is an individual who has been recently released from prison. This group has had a history of adversity obtaining work and reintegrating into society.</string>
+    <string name="title_activity_info">InfoActivity</string>
+    <string name="returningTitle">Returning Citizen</string>
+
+</resources>
