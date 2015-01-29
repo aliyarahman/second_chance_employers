@@ -14,7 +14,7 @@ class Industry(models.Model):
 
 
 class Employer(models.Model):
-    name = models.CharField(max_length=40)
+    name = models.CharField(max_length=100)
     phone = models.CharField(max_length=40, null=True, blank=True)
     email = models.EmailField(max_length=255, null=True, blank=True)
     hq_address = models.CharField(max_length=255, null=True, blank=True)
@@ -46,7 +46,7 @@ class Employer(models.Model):
 
 class Position(models.Model):
     employer = models.ForeignKey(Employer)
-    title = models.CharField(max_length=40)
+    title = models.CharField(max_length=100)
     phone = models.CharField(max_length=40, null=True, blank=True)
     worksite_location = models.CharField(max_length=255, null=True, blank=True)
     job_posted = models.CharField(max_length = 100, null=True, blank = True) #link to the position
